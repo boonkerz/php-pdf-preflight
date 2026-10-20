@@ -22,10 +22,9 @@ Minor-Version potenziell inkompatibel) und wirft sonst eine
    *Submit* → `https://github.com/boonkerz/php-pdf-preflight`. Danach in den
    Packagist-Einstellungen die GitHub-Integration aktivieren, damit neue
    Tags automatisch erscheinen.
-3. **GHCR:** Das erste Release legt die Pakete an. Danach in GitHub unter
-   *Packages → php-pdf-preflight → Package settings* die Sichtbarkeit auf
-   **Public** stellen, sonst brauchen Builds einen Login. Das ist ein
-   einmaliger Schritt; GitHub legt neue Pakete standardmäßig privat an.
+3. **GHCR:** Die Images werden über das Label `org.opencontainers.image.source`
+   mit dem Repository verknüpft und übernehmen dessen Sichtbarkeit
+   (öffentlich). Builds können sie ohne Login ziehen.
 4. Die Workflows benötigen keine Secrets: Für Releases und GHCR reicht das
    automatische `GITHUB_TOKEN`.
 
@@ -74,10 +73,11 @@ automatisch.
 
 ```dockerfile
 # syntax=docker/dockerfile:1
-FROM php:8.4-fpm
-
 ARG PDF_PREFLIGHT_VERSION=0.1.0
-RUN --mount=type=bind,from=ghcr.io/boonkerz/php-pdf-preflight:${PDF_PREFLIGHT_VERSION}-php8.4,source=/pdf_preflight.so,target=/tmp/pdf_preflight.so \
+FROM ghcr.io/boonkerz/php-pdf-preflight:${PDF_PREFLIGHT_VERSION}-php8.4 AS pdf-preflight
+
+FROM php:8.4-fpm
+RUN --mount=type=bind,from=pdf-preflight,source=/pdf_preflight.so,target=/tmp/pdf_preflight.so \
     cp /tmp/pdf_preflight.so "$(php-config --extension-dir)/" \
  && docker-php-ext-enable pdf_preflight
 ```
@@ -86,14 +86,20 @@ RUN --mount=type=bind,from=ghcr.io/boonkerz/php-pdf-preflight:${PDF_PREFLIGHT_VE
 
 ```dockerfile
 # syntax=docker/dockerfile:1
-FROM php:8.4-fpm-alpine
-
 ARG PDF_PREFLIGHT_VERSION=0.1.0
-RUN --mount=type=bind,from=ghcr.io/boonkerz/php-pdf-preflight:${PDF_PREFLIGHT_VERSION}-php8.4-alpine,source=/pdf_preflight.so,target=/tmp/pdf_preflight.so \
+FROM ghcr.io/boonkerz/php-pdf-preflight:${PDF_PREFLIGHT_VERSION}-php8.4-alpine AS pdf-preflight
+
+FROM php:8.4-fpm-alpine
+RUN --mount=type=bind,from=pdf-preflight,source=/pdf_preflight.so,target=/tmp/pdf_preflight.so \
     apk add --no-cache libgcc \
  && cp /tmp/pdf_preflight.so "$(php-config --extension-dir)/" \
  && docker-php-ext-enable pdf_preflight
 ```
+
+Die Version wird als globales `ARG` vor dem ersten `FROM` deklariert und
+über einen Stage-Alias eingebunden, denn `--mount=…,from=` erlaubt keine
+Variablen. Getestet mit `php:8.4-fpm` (Debian 13) und `php:8.4-fpm-alpine`
+(Alpine 3.24) gegen die veröffentlichten GHCR-Images.
 
 `libgcc` (ca. 100 KB) stellt `libgcc_s.so.1` bereit. Die Extension braucht
 die Bibliothek, um Rust-Panics abzufangen, statt den PHP-Prozess zu beenden.
@@ -102,7 +108,7 @@ auf ARM64, und ohne sie lädt die Extension nicht
 (`Error loading shared library libgcc_s.so.1`).
 
 `RUN --mount` benötigt BuildKit (Standard seit Docker 23). Ohne BuildKit
-funktioniert der klassische Weg über eine Build-Stage:
+funktioniert der klassische Weg über `COPY`:
 
 ```dockerfile
 FROM ghcr.io/boonkerz/php-pdf-preflight:0.1.0-php8.4-alpine AS pdf-preflight
