@@ -1,0 +1,109 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  rust:
+    name: Rust tests and code quality
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: extension
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: extension
+      - run: cargo fmt --check
+      - name: Clippy (core and CLI, no PHP required)
+        run: cargo clippy --locked --no-default-features --features cli --all-targets -- -D warnings
+      - name: Tests (core, without PHP)
+        run: cargo test --locked --release --no-default-features
+      - name: Benchmark fixtures
+        run: |
+          cargo build --locked --release --no-default-features --features cli
+          {
+            echo '### Analysis time per fixture (release build)'
+            echo '```'
+            ./target/release/pdf-analyze --bench ../tests/fixtures/*.pdf || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  clippy-php:
+    name: Clippy (with PHP bindings)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: extension
+      - run: cargo clippy --locked --all-targets -- -D warnings
+        working-directory: extension
+
+  fixtures:
+    name: Fixtures are reproducible
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tests/fixtures/generate.py
+      - run: git diff --exit-code -- tests/fixtures
+
+  licenses:
+    name: Dependency licenses
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: EmbarkStudios/cargo-deny-action@v2
+        with:
+          manifest-path: extension/Cargo.toml
+          command: check licenses bans sources
+
+  php-library:
+    name: PHP library (PHP ${{ matrix.php }})
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.2', '8.3', '8.4', '8.5']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+      - run: composer validate --strict
+      - run: composer install --no-interaction --no-progress
+      - name: Unit tests (integration tests run in the extension build jobs)
+        run: vendor/bin/phpunit --testsuite unit
+      - name: PHPStan
+        if: matrix.php == '8.2'
+        run: vendor/bin/phpstan analyse --no-progress --memory-limit=512M
+
+  php-lint:
+    name: PHP syntax
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+      - run: find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
+
+  extension:
+    name: Extension builds
+    uses: ./.github/workflows/build-extension.yml

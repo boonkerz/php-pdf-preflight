@@ -1,0 +1,92 @@
+{
+    "schema": 1,
+    "id": "business-card",
+    "name": "Visitenkarte 85 × 55 mm",
+    "description": "Visitenkarten, ein- oder zweiseitig, 3 mm Beschnitt, eingebettete Schriften",
+    "version": 2,
+    "locale": "de",
+    "rules": [
+        {
+            "type": "file_type",
+            "params": {
+                "allowed": [
+                    "pdf"
+                ]
+            },
+            "messages": {
+                "file_type.not_allowed": "Bitte laden Sie Ihre Visitenkarte als PDF-Datei hoch."
+            }
+        },
+        {
+            "type": "page_count",
+            "params": {
+                "min": 1,
+                "max": 2
+            }
+        },
+        {
+            "type": "page_size",
+            "params": {
+                "width": 85,
+                "height": 55,
+                "tolerance": 0.5,
+                "box": "TrimBox"
+            },
+            "messages": {
+                "page_size.mismatch": "Seite {page}: Das Endformat muss 85 × 55 mm betragen (gefunden: {actual_width} × {actual_height} mm)."
+            }
+        },
+        {
+            "type": "box_required",
+            "params": {
+                "boxes": [
+                    "TrimBox",
+                    "BleedBox"
+                ]
+            },
+            "severity": "warning"
+        },
+        {
+            "type": "bleed_margin",
+            "params": {
+                "min_bleed": 3,
+                "require_defined_boxes": false
+            }
+        },
+        {
+            "type": "fonts_embedded",
+            "params": {
+                "ignore_invisible_text": true
+            }
+        },
+        {
+            "type": "image_resolution",
+            "params": {
+                "min_dpi": 250,
+                "min_dpi_bitonal": 600
+            },
+            "severity": "warning"
+        },
+        {
+            "type": "color_spaces",
+            "params": {
+                "forbidden": [
+                    "rgb",
+                    "lab"
+                ],
+                "max_spot_colors": 2
+            },
+            "severity": "warning",
+            "messages": {
+                "color_spaces.forbidden": "Seite {page}: Bitte verwenden Sie CMYK statt {family}."
+            }
+        },
+        {
+            "type": "color_pages",
+            "enabled": false,
+            "params": {
+                "max_color": 2
+            }
+        }
+    ]
+}

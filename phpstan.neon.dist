@@ -1,0 +1,8 @@
+parameters:
+    level: 8
+    paths:
+        - php/src
+        - php/tests
+    scanFiles:
+        - extension/pdf_preflight.stub.php
+    treatPhpDocTypesAsCertain: false

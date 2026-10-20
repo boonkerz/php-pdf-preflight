@@ -1,0 +1,16 @@
+# Only the PHP library is shipped in the Composer package (dist archive).
+/.github            export-ignore
+/docs               export-ignore
+/examples           export-ignore
+/extension          export-ignore
+/scripts            export-ignore
+/tests              export-ignore
+/docker             export-ignore
+/php/tests          export-ignore
+/Makefile           export-ignore
+/phpunit.xml.dist   export-ignore
+/phpstan.neon.dist  export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+
+*.pdf binary

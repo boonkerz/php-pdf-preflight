@@ -1,0 +1,36 @@
+# Reusable workflow: builds and tests the extension for every supported
+# PHP version, thread-safety mode, architecture and libc inside the official
+# PHP Docker images. glibc builds use Debian bookworm (glibc 2.36) and run on
+# bookworm and trixie; musl builds use Alpine 3.21 and run on Alpine >= 3.21.
+name: Build extension
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    name: PHP ${{ matrix.php }}-${{ matrix.variant }} (${{ matrix.arch }})
+    runs-on: ${{ matrix.arch == 'aarch64' && 'ubuntu-24.04-arm' || 'ubuntu-24.04' }}
+    env:
+      # Official Docker Hub images via Google's mirror (avoids Docker Hub pull
+      # rate limits for anonymous runners).
+      IMAGE: mirror.gcr.io/library/php:${{ matrix.php }}-${{ matrix.variant }}
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.2', '8.3', '8.4', '8.5']
+        variant: [cli-bookworm, zts-bookworm, cli-alpine3.21]
+        arch: [x86_64, aarch64]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build, test and check dynamic dependencies
+        run: scripts/build-in-docker.sh "$IMAGE"
+      - name: Install PHP library dependencies
+        run: composer install --no-interaction --no-progress
+      - name: PHP library tests incl. integration tests with this build
+        run: scripts/php-test-in-docker.sh "$IMAGE"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdf_preflight-php${{ matrix.php }}-${{ matrix.variant }}-${{ matrix.arch }}
+          path: dist/*.so
+          if-no-files-found: error

@@ -1,0 +1,1430 @@
+{
+    "document": {
+        "version": "1.7",
+        "header_version": "1.7",
+        "page_count": 5,
+        "file_size": 6913,
+        "object_count": 44,
+        "encrypted": false,
+        "encryption": null,
+        "info": {
+            "Title": null,
+            "Author": null,
+            "Subject": null,
+            "Keywords": null,
+            "Creator": null,
+            "Producer": null,
+            "CreationDate": null,
+            "ModDate": null,
+            "CreationDateIso": null,
+            "ModDateIso": null
+        },
+        "has_xmp_metadata": false,
+        "pdfx": {
+            "declared": false,
+            "version": null,
+            "version_info_dict": null,
+            "version_xmp": null,
+            "has_pdfx_output_intent": false,
+            "validated": false
+        },
+        "output_intents": [],
+        "guard": {
+            "object_streams_verified": 0,
+            "object_streams_unverified": 0
+        },
+        "issues": []
+    },
+    "pages": [
+        {
+            "page": 1,
+            "width_mm": 210.0001,
+            "height_mm": 297.0001,
+            "orientation": "portrait",
+            "rotation": 0,
+            "user_unit": 1.0,
+            "size_box": "CropBox",
+            "boxes": {
+                "MediaBox": {
+                    "defined": true,
+                    "source": "page",
+                    "derived_from": null,
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "CropBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "MediaBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "BleedBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "TrimBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "ArtBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                }
+            },
+            "issues": [],
+            "fonts": [
+                {
+                    "object": "2 0 R",
+                    "name": "Helvetica",
+                    "base_font": "Helvetica",
+                    "type": "Type1",
+                    "descendant_type": null,
+                    "embedded": false,
+                    "embedding": "not_embedded",
+                    "subset": false,
+                    "standard14": true,
+                    "font_file": null,
+                    "font_file_subtype": null,
+                    "program_format": null,
+                    "problems": [],
+                    "used": true,
+                    "visible": true,
+                    "resource_names": [
+                        "F1"
+                    ],
+                    "contexts": [
+                        "page"
+                    ]
+                },
+                {
+                    "object": "5 0 R",
+                    "name": "StubSans",
+                    "base_font": "ABCDEF+StubSans",
+                    "type": "TrueType",
+                    "descendant_type": null,
+                    "embedded": true,
+                    "embedding": "embedded",
+                    "subset": true,
+                    "standard14": false,
+                    "font_file": "FontFile2",
+                    "font_file_subtype": null,
+                    "program_format": "truetype",
+                    "problems": [],
+                    "used": true,
+                    "visible": true,
+                    "resource_names": [
+                        "F2"
+                    ],
+                    "contexts": [
+                        "page"
+                    ]
+                },
+                {
+                    "object": "9 0 R",
+                    "name": "StubCID",
+                    "base_font": "StubCID",
+                    "type": "Type0",
+                    "descendant_type": "CIDFontType0",
+                    "embedded": true,
+                    "embedding": "embedded",
+                    "subset": false,
+                    "standard14": false,
+                    "font_file": "FontFile3",
+                    "font_file_subtype": "CIDFontType0C",
+                    "program_format": "cff",
+                    "problems": [],
+                    "used": true,
+                    "visible": true,
+                    "resource_names": [
+                        "F3"
+                    ],
+                    "contexts": [
+                        "page"
+                    ]
+                },
+                {
+                    "object": "11 0 R",
+                    "name": "",
+                    "base_font": "",
+                    "type": "Type3",
+                    "descendant_type": null,
+                    "embedded": true,
+                    "embedding": "embedded",
+                    "subset": false,
+                    "standard14": false,
+                    "font_file": null,
+                    "font_file_subtype": null,
+                    "program_format": "type3",
+                    "problems": [],
+                    "used": true,
+                    "visible": true,
+                    "resource_names": [
+                        "F4"
+                    ],
+                    "contexts": [
+                        "page"
+                    ]
+                },
+                {
+                    "object": "12 0 R",
+                    "name": "Times-Roman",
+                    "base_font": "Times-Roman",
+                    "type": "Type1",
+                    "descendant_type": null,
+                    "embedded": false,
+                    "embedding": "not_embedded",
+                    "subset": false,
+                    "standard14": true,
+                    "font_file": null,
+                    "font_file_subtype": null,
+                    "program_format": null,
+                    "problems": [],
+                    "used": false,
+                    "visible": false,
+                    "resource_names": [
+                        "F5"
+                    ],
+                    "contexts": []
+                },
+                {
+                    "object": "13 0 R",
+                    "name": "Courier-Bold",
+                    "base_font": "Courier-Bold",
+                    "type": "Type1",
+                    "descendant_type": null,
+                    "embedded": false,
+                    "embedding": "not_embedded",
+                    "subset": false,
+                    "standard14": true,
+                    "font_file": null,
+                    "font_file_subtype": null,
+                    "program_format": null,
+                    "problems": [],
+                    "used": true,
+                    "visible": false,
+                    "resource_names": [
+                        "F6"
+                    ],
+                    "contexts": [
+                        "page"
+                    ]
+                }
+            ],
+            "colors": {
+                "classification": "grayscale",
+                "painted": true,
+                "used": [
+                    {
+                        "family": "DeviceGray",
+                        "category": "gray",
+                        "components": 1,
+                        "colorants": [],
+                        "alternate": null,
+                        "base": null,
+                        "object": null,
+                        "targets": [
+                            "text"
+                        ],
+                        "class": "grayscale",
+                        "neutral": true
+                    }
+                ],
+                "declared": [],
+                "spot_colors": [],
+                "declared_spot_colors": [],
+                "reasons": []
+            },
+            "images": [],
+            "content_issues": [],
+            "analysis_complete": true
+        },
+        {
+            "page": 2,
+            "width_mm": 210.0001,
+            "height_mm": 297.0001,
+            "orientation": "portrait",
+            "rotation": 0,
+            "user_unit": 1.0,
+            "size_box": "CropBox",
+            "boxes": {
+                "MediaBox": {
+                    "defined": true,
+                    "source": "page",
+                    "derived_from": null,
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "CropBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "MediaBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "BleedBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "TrimBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "ArtBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                }
+            },
+            "issues": [],
+            "fonts": [
+                {
+                    "object": "16 0 R",
+                    "name": "Courier",
+                    "base_font": "Courier",
+                    "type": "Type1",
+                    "descendant_type": null,
+                    "embedded": false,
+                    "embedding": "not_embedded",
+                    "subset": false,
+                    "standard14": true,
+                    "font_file": null,
+                    "font_file_subtype": null,
+                    "program_format": null,
+                    "problems": [],
+                    "used": true,
+                    "visible": true,
+                    "resource_names": [
+                        "F7"
+                    ],
+                    "contexts": [
+                        "form"
+                    ]
+                }
+            ],
+            "colors": {
+                "classification": "grayscale",
+                "painted": true,
+                "used": [
+                    {
+                        "family": "DeviceGray",
+                        "category": "gray",
+                        "components": 1,
+                        "colorants": [],
+                        "alternate": null,
+                        "base": null,
+                        "object": null,
+                        "targets": [
+                            "text"
+                        ],
+                        "class": "grayscale",
+                        "neutral": true
+                    }
+                ],
+                "declared": [],
+                "spot_colors": [],
+                "declared_spot_colors": [],
+                "reasons": []
+            },
+            "images": [],
+            "content_issues": [],
+            "analysis_complete": true
+        },
+        {
+            "page": 3,
+            "width_mm": 210.0001,
+            "height_mm": 297.0001,
+            "orientation": "portrait",
+            "rotation": 0,
+            "user_unit": 1.0,
+            "size_box": "CropBox",
+            "boxes": {
+                "MediaBox": {
+                    "defined": true,
+                    "source": "page",
+                    "derived_from": null,
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "CropBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "MediaBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "BleedBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "TrimBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "ArtBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                }
+            },
+            "issues": [],
+            "fonts": [
+                {
+                    "object": "22 0 R",
+                    "name": "Dangling",
+                    "base_font": "Dangling",
+                    "type": "TrueType",
+                    "descendant_type": null,
+                    "embedded": false,
+                    "embedding": "invalid",
+                    "subset": false,
+                    "standard14": false,
+                    "font_file": "FontFile2",
+                    "font_file_subtype": null,
+                    "program_format": null,
+                    "problems": [
+                        "FontFile2 does not resolve to a stream"
+                    ],
+                    "used": true,
+                    "visible": true,
+                    "resource_names": [
+                        "D1"
+                    ],
+                    "contexts": [
+                        "page"
+                    ]
+                },
+                {
+                    "object": "28 0 R",
+                    "name": "EmptyProgram",
+                    "base_font": "EmptyProgram",
+                    "type": "TrueType",
+                    "descendant_type": null,
+                    "embedded": false,
+                    "embedding": "invalid",
+                    "subset": false,
+                    "standard14": false,
+                    "font_file": "FontFile2",
+                    "font_file_subtype": null,
+                    "program_format": null,
+                    "problems": [
+                        "FontFile2 is empty"
+                    ],
+                    "used": true,
+                    "visible": true,
+                    "resource_names": [
+                        "E1"
+                    ],
+                    "contexts": [
+                        "page"
+                    ]
+                },
+                {
+                    "object": "25 0 R",
+                    "name": "WrongProgram",
+                    "base_font": "WrongProgram",
+                    "type": "Type1",
+                    "descendant_type": null,
+                    "embedded": true,
+                    "embedding": "embedded",
+                    "subset": false,
+                    "standard14": false,
+                    "font_file": "FontFile",
+                    "font_file_subtype": null,
+                    "program_format": "truetype",
+                    "problems": [
+                        "FontFile contains a truetype font program"
+                    ],
+                    "used": true,
+                    "visible": true,
+                    "resource_names": [
+                        "W1"
+                    ],
+                    "contexts": [
+                        "page"
+                    ]
+                }
+            ],
+            "colors": {
+                "classification": "grayscale",
+                "painted": true,
+                "used": [
+                    {
+                        "family": "DeviceGray",
+                        "category": "gray",
+                        "components": 1,
+                        "colorants": [],
+                        "alternate": null,
+                        "base": null,
+                        "object": null,
+                        "targets": [
+                            "text"
+                        ],
+                        "class": "grayscale",
+                        "neutral": true
+                    }
+                ],
+                "declared": [],
+                "spot_colors": [],
+                "declared_spot_colors": [],
+                "reasons": []
+            },
+            "images": [],
+            "content_issues": [],
+            "analysis_complete": true
+        },
+        {
+            "page": 4,
+            "width_mm": 210.0001,
+            "height_mm": 297.0001,
+            "orientation": "portrait",
+            "rotation": 0,
+            "user_unit": 1.0,
+            "size_box": "CropBox",
+            "boxes": {
+                "MediaBox": {
+                    "defined": true,
+                    "source": "page",
+                    "derived_from": null,
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "CropBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "MediaBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "BleedBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "TrimBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "ArtBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                }
+            },
+            "issues": [],
+            "fonts": [
+                {
+                    "object": "31 0 R",
+                    "name": "Helvetica-Bold",
+                    "base_font": "Helvetica-Bold",
+                    "type": "Type1",
+                    "descendant_type": null,
+                    "embedded": false,
+                    "embedding": "not_embedded",
+                    "subset": false,
+                    "standard14": true,
+                    "font_file": null,
+                    "font_file_subtype": null,
+                    "program_format": null,
+                    "problems": [],
+                    "used": true,
+                    "visible": true,
+                    "resource_names": [],
+                    "contexts": [
+                        "page"
+                    ]
+                },
+                {
+                    "object": "32 0 R",
+                    "name": "Helvetica-Oblique",
+                    "base_font": "Helvetica-Oblique",
+                    "type": "Type1",
+                    "descendant_type": null,
+                    "embedded": false,
+                    "embedding": "not_embedded",
+                    "subset": false,
+                    "standard14": true,
+                    "font_file": null,
+                    "font_file_subtype": null,
+                    "program_format": null,
+                    "problems": [],
+                    "used": true,
+                    "visible": true,
+                    "resource_names": [
+                        "A1"
+                    ],
+                    "contexts": [
+                        "annotation"
+                    ]
+                }
+            ],
+            "colors": {
+                "classification": "grayscale",
+                "painted": true,
+                "used": [
+                    {
+                        "family": "DeviceGray",
+                        "category": "gray",
+                        "components": 1,
+                        "colorants": [],
+                        "alternate": null,
+                        "base": null,
+                        "object": null,
+                        "targets": [
+                            "text"
+                        ],
+                        "class": "grayscale",
+                        "neutral": true
+                    }
+                ],
+                "declared": [],
+                "spot_colors": [],
+                "declared_spot_colors": [],
+                "reasons": []
+            },
+            "images": [],
+            "content_issues": [],
+            "analysis_complete": true
+        },
+        {
+            "page": 5,
+            "width_mm": 210.0001,
+            "height_mm": 297.0001,
+            "orientation": "portrait",
+            "rotation": 0,
+            "user_unit": 1.0,
+            "size_box": "CropBox",
+            "boxes": {
+                "MediaBox": {
+                    "defined": true,
+                    "source": "page",
+                    "derived_from": null,
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "CropBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "MediaBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "BleedBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "TrimBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                },
+                "ArtBox": {
+                    "defined": false,
+                    "source": "default",
+                    "derived_from": "CropBox",
+                    "rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "effective_rect": [
+                        0.0,
+                        0.0,
+                        595.276,
+                        841.89
+                    ],
+                    "exceeds_media_box": false,
+                    "width_pt": 595.276,
+                    "height_pt": 841.89,
+                    "width_mm": 210.0001,
+                    "height_mm": 297.0001,
+                    "display_width_mm": 210.0001,
+                    "display_height_mm": 297.0001
+                }
+            },
+            "issues": [],
+            "fonts": [
+                {
+                    "object": "40 0 R",
+                    "name": "Times-Bold",
+                    "base_font": "Times-Bold",
+                    "type": "Type1",
+                    "descendant_type": null,
+                    "embedded": false,
+                    "embedding": "not_embedded",
+                    "subset": false,
+                    "standard14": true,
+                    "font_file": null,
+                    "font_file_subtype": null,
+                    "program_format": null,
+                    "problems": [],
+                    "used": true,
+                    "visible": true,
+                    "resource_names": [
+                        "P1"
+                    ],
+                    "contexts": [
+                        "pattern"
+                    ]
+                }
+            ],
+            "colors": {
+                "classification": "grayscale",
+                "painted": true,
+                "used": [
+                    {
+                        "family": "DeviceGray",
+                        "category": "gray",
+                        "components": 1,
+                        "colorants": [],
+                        "alternate": null,
+                        "base": null,
+                        "object": null,
+                        "targets": [
+                            "text"
+                        ],
+                        "class": "grayscale",
+                        "neutral": true
+                    }
+                ],
+                "declared": [],
+                "spot_colors": [],
+                "declared_spot_colors": [],
+                "reasons": []
+            },
+            "images": [],
+            "content_issues": [
+                {
+                    "code": "font_resource_missing",
+                    "message": "font /Missing is not defined in the resources",
+                    "page": 5
+                }
+            ],
+            "analysis_complete": true
+        }
+    ],
+    "fonts": [
+        {
+            "object": "2 0 R",
+            "name": "Helvetica",
+            "base_font": "Helvetica",
+            "type": "Type1",
+            "descendant_type": null,
+            "embedded": false,
+            "embedding": "not_embedded",
+            "subset": false,
+            "standard14": true,
+            "font_file": null,
+            "font_file_subtype": null,
+            "program_format": null,
+            "problems": [],
+            "used": true,
+            "pages": [
+                1
+            ]
+        },
+        {
+            "object": "5 0 R",
+            "name": "StubSans",
+            "base_font": "ABCDEF+StubSans",
+            "type": "TrueType",
+            "descendant_type": null,
+            "embedded": true,
+            "embedding": "embedded",
+            "subset": true,
+            "standard14": false,
+            "font_file": "FontFile2",
+            "font_file_subtype": null,
+            "program_format": "truetype",
+            "problems": [],
+            "used": true,
+            "pages": [
+                1
+            ]
+        },
+        {
+            "object": "9 0 R",
+            "name": "StubCID",
+            "base_font": "StubCID",
+            "type": "Type0",
+            "descendant_type": "CIDFontType0",
+            "embedded": true,
+            "embedding": "embedded",
+            "subset": false,
+            "standard14": false,
+            "font_file": "FontFile3",
+            "font_file_subtype": "CIDFontType0C",
+            "program_format": "cff",
+            "problems": [],
+            "used": true,
+            "pages": [
+                1
+            ]
+        },
+        {
+            "object": "11 0 R",
+            "name": "",
+            "base_font": "",
+            "type": "Type3",
+            "descendant_type": null,
+            "embedded": true,
+            "embedding": "embedded",
+            "subset": false,
+            "standard14": false,
+            "font_file": null,
+            "font_file_subtype": null,
+            "program_format": "type3",
+            "problems": [],
+            "used": true,
+            "pages": [
+                1
+            ]
+        },
+        {
+            "object": "12 0 R",
+            "name": "Times-Roman",
+            "base_font": "Times-Roman",
+            "type": "Type1",
+            "descendant_type": null,
+            "embedded": false,
+            "embedding": "not_embedded",
+            "subset": false,
+            "standard14": true,
+            "font_file": null,
+            "font_file_subtype": null,
+            "program_format": null,
+            "problems": [],
+            "used": false,
+            "pages": []
+        },
+        {
+            "object": "13 0 R",
+            "name": "Courier-Bold",
+            "base_font": "Courier-Bold",
+            "type": "Type1",
+            "descendant_type": null,
+            "embedded": false,
+            "embedding": "not_embedded",
+            "subset": false,
+            "standard14": true,
+            "font_file": null,
+            "font_file_subtype": null,
+            "program_format": null,
+            "problems": [],
+            "used": true,
+            "pages": [
+                1
+            ]
+        },
+        {
+            "object": "16 0 R",
+            "name": "Courier",
+            "base_font": "Courier",
+            "type": "Type1",
+            "descendant_type": null,
+            "embedded": false,
+            "embedding": "not_embedded",
+            "subset": false,
+            "standard14": true,
+            "font_file": null,
+            "font_file_subtype": null,
+            "program_format": null,
+            "problems": [],
+            "used": true,
+            "pages": [
+                2
+            ]
+        },
+        {
+            "object": "22 0 R",
+            "name": "Dangling",
+            "base_font": "Dangling",
+            "type": "TrueType",
+            "descendant_type": null,
+            "embedded": false,
+            "embedding": "invalid",
+            "subset": false,
+            "standard14": false,
+            "font_file": "FontFile2",
+            "font_file_subtype": null,
+            "program_format": null,
+            "problems": [
+                "FontFile2 does not resolve to a stream"
+            ],
+            "used": true,
+            "pages": [
+                3
+            ]
+        },
+        {
+            "object": "28 0 R",
+            "name": "EmptyProgram",
+            "base_font": "EmptyProgram",
+            "type": "TrueType",
+            "descendant_type": null,
+            "embedded": false,
+            "embedding": "invalid",
+            "subset": false,
+            "standard14": false,
+            "font_file": "FontFile2",
+            "font_file_subtype": null,
+            "program_format": null,
+            "problems": [
+                "FontFile2 is empty"
+            ],
+            "used": true,
+            "pages": [
+                3
+            ]
+        },
+        {
+            "object": "25 0 R",
+            "name": "WrongProgram",
+            "base_font": "WrongProgram",
+            "type": "Type1",
+            "descendant_type": null,
+            "embedded": true,
+            "embedding": "embedded",
+            "subset": false,
+            "standard14": false,
+            "font_file": "FontFile",
+            "font_file_subtype": null,
+            "program_format": "truetype",
+            "problems": [
+                "FontFile contains a truetype font program"
+            ],
+            "used": true,
+            "pages": [
+                3
+            ]
+        },
+        {
+            "object": "31 0 R",
+            "name": "Helvetica-Bold",
+            "base_font": "Helvetica-Bold",
+            "type": "Type1",
+            "descendant_type": null,
+            "embedded": false,
+            "embedding": "not_embedded",
+            "subset": false,
+            "standard14": true,
+            "font_file": null,
+            "font_file_subtype": null,
+            "program_format": null,
+            "problems": [],
+            "used": true,
+            "pages": [
+                4
+            ]
+        },
+        {
+            "object": "32 0 R",
+            "name": "Helvetica-Oblique",
+            "base_font": "Helvetica-Oblique",
+            "type": "Type1",
+            "descendant_type": null,
+            "embedded": false,
+            "embedding": "not_embedded",
+            "subset": false,
+            "standard14": true,
+            "font_file": null,
+            "font_file_subtype": null,
+            "program_format": null,
+            "problems": [],
+            "used": true,
+            "pages": [
+                4
+            ]
+        },
+        {
+            "object": "40 0 R",
+            "name": "Times-Bold",
+            "base_font": "Times-Bold",
+            "type": "Type1",
+            "descendant_type": null,
+            "embedded": false,
+            "embedding": "not_embedded",
+            "subset": false,
+            "standard14": true,
+            "font_file": null,
+            "font_file_subtype": null,
+            "program_format": null,
+            "problems": [],
+            "used": true,
+            "pages": [
+                5
+            ]
+        }
+    ],
+    "colors": {
+        "color_pages": [],
+        "grayscale_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "unknown_pages": [],
+        "spot_colors": []
+    },
+    "analysis_complete": true,
+    "limits": {
+        "max_file_size": 1073741824,
+        "max_objects": 5000000,
+        "max_pages": 100000,
+        "max_stream_size": 268435456,
+        "max_total_decoded": 2147483648,
+        "max_nesting_depth": 32,
+        "max_operations_per_page": 20000000,
+        "max_analysis_time_ms": 60000,
+        "max_color_check_pixels": 25000000,
+        "max_image_placements": 100000
+    }
+}

@@ -1,0 +1,5 @@
+target/
+/vendor/
+/.phpunit.cache/
+/dist/
+/composer.lock
