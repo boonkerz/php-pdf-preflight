@@ -49,7 +49,8 @@ Docker-Images auf GHCR. Für ein Docker-Image genügt:
 # syntax=docker/dockerfile:1
 FROM php:8.4-fpm-alpine
 RUN --mount=type=bind,from=ghcr.io/boonkerz/php-pdf-preflight:0.1.0-php8.4-alpine,source=/pdf_preflight.so,target=/tmp/pdf_preflight.so \
-    cp /tmp/pdf_preflight.so "$(php-config --extension-dir)/" && docker-php-ext-enable pdf_preflight
+    apk add --no-cache libgcc \
+ && cp /tmp/pdf_preflight.so "$(php-config --extension-dir)/" && docker-php-ext-enable pdf_preflight
 ```
 
 ```sh

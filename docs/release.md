@@ -90,9 +90,16 @@ FROM php:8.4-fpm-alpine
 
 ARG PDF_PREFLIGHT_VERSION=0.1.0
 RUN --mount=type=bind,from=ghcr.io/boonkerz/php-pdf-preflight:${PDF_PREFLIGHT_VERSION}-php8.4-alpine,source=/pdf_preflight.so,target=/tmp/pdf_preflight.so \
-    cp /tmp/pdf_preflight.so "$(php-config --extension-dir)/" \
+    apk add --no-cache libgcc \
+ && cp /tmp/pdf_preflight.so "$(php-config --extension-dir)/" \
  && docker-php-ext-enable pdf_preflight
 ```
+
+`libgcc` (ca. 100 KB) stellt `libgcc_s.so.1` bereit. Die Extension braucht
+die Bibliothek, um Rust-Panics abzufangen, statt den PHP-Prozess zu beenden.
+Unter Debian ist sie immer vorhanden. Im Alpine-Image fehlt sie zumindest
+auf ARM64, und ohne sie lädt die Extension nicht
+(`Error loading shared library libgcc_s.so.1`).
 
 `RUN --mount` benötigt BuildKit (Standard seit Docker 23). Ohne BuildKit
 funktioniert der klassische Weg über eine Build-Stage:
@@ -101,7 +108,8 @@ funktioniert der klassische Weg über eine Build-Stage:
 FROM ghcr.io/boonkerz/php-pdf-preflight:0.1.0-php8.4-alpine AS pdf-preflight
 FROM php:8.4-fpm-alpine
 COPY --from=pdf-preflight /pdf_preflight.so /tmp/pdf_preflight.so
-RUN mv /tmp/pdf_preflight.so "$(php-config --extension-dir)/" && docker-php-ext-enable pdf_preflight
+RUN apk add --no-cache libgcc \
+ && mv /tmp/pdf_preflight.so "$(php-config --extension-dir)/" && docker-php-ext-enable pdf_preflight
 ```
 
 ### Ohne Docker (Release-Asset)

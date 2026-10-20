@@ -84,6 +84,10 @@ $ sh scripts/check-deps.sh target/release/libpdf_preflight.so
   ok      ld-linux-x86-64.so.2
 ```
 
+Unter Alpine (musl) gehört `libgcc_s.so.1` nicht zur C-Bibliothek, sondern
+zum Paket `libgcc`. Es muss im Laufzeit-Image installiert sein
+(`apk add --no-cache libgcc`), siehe [release.md](release.md).
+
 Es gibt keine Abhängigkeiten zu zlib, OpenSSL, libclang, PDF-Bibliotheken oder
 Java. Inflate, RC4/AES und alles Weitere ist in Rust einkompiliert. Die
 PHP-Symbole (`zend_*`) werden beim Laden aus dem PHP-Binary aufgelöst.
