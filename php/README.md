@@ -9,8 +9,10 @@ läuft ab PHP 8.2.
 composer require boonkerz/php-pdf-preflight
 ```
 
-Installation der Extension (Docker-Images, Release-Assets):
-[docs/release.md](../docs/release.md).
+Die Library setzt die Extension in derselben `major.minor`-Version voraus
+(`ext-pdf_preflight: 0.1.*`). Sie muss vor `composer install` installiert
+sein. Installation (Docker-Images, Release-Assets) und Build-Stages ohne
+Extension: [docs/release.md](../docs/release.md).
 
 ## Architektur
 
@@ -24,8 +26,8 @@ Datei ──► Analyzer ──► DocumentAnalysis ──► Preflight(Regeln) 
   Extension. Eine Analyse lässt sich als JSON speichern
   (`$analysis->toJson()`) und später ohne erneutes Parsen gegen andere
   Profile prüfen (`DocumentAnalysis::fromJson()`).
-* Für **Regeln und Profile** wird die Extension nicht benötigt. Nur das
-  Analysieren von PDF-Dateien setzt sie voraus.
+* **Regeln und Profile** greifen nicht auf die Extension zu. Nur das
+  Analysieren von PDF-Dateien ruft sie auf.
 * **Drei Ergebnisse statt zwei:** Eine Regel kann bestanden sein,
   fehlschlagen oder *unbestimmt* sein. „Unbestimmt“ bedeutet, dass die Analyse
   für eine Entscheidung nicht ausreicht, etwa bei unbekannter

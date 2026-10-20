@@ -35,6 +35,8 @@ Minor-Version potenziell inkompatibel) und wirft sonst eine
 #    extension/Cargo.toml          version = "0.2.0"
 #    extension/pdf_preflight.stub.php   public const VERSION = '0.2.0';
 #    php/src/Analysis/NativePdfAnalyzer.php  EXTENSION_VERSION = '0.2'
+#    composer.json                 "ext-pdf_preflight": "0.2.*" (require)
+#                                  "ext-pdf_preflight": "0.2.0" (config.platform)
 cd extension && cargo update -p pdf_preflight && cd ..   # Cargo.lock nachziehen
 scripts/check-version.sh 0.2.0
 
@@ -140,20 +142,31 @@ scripts/build-in-docker.sh php:8.4-fpm-bookworm   # Ergebnis unter dist/
 composer require boonkerz/php-pdf-preflight
 ```
 
-Damit Composer die Extension als Voraussetzung prüft, in der
-`composer.json` der Anwendung zusätzlich:
+Die Library verlangt die Extension mit derselben `major.minor`-Version
+(`"ext-pdf_preflight": "0.1.*"`). Die Extension meldet ihre Version an PHP
+(`phpversion('pdf_preflight')`). `composer install` schlägt deshalb fehl, wenn
+sie fehlt oder eine inkompatible Version installiert ist. Die Extension muss
+also vor `composer install` im Image sein.
+
+Wird `composer install` in einem eigenen Build-Stage ohne Extension
+ausgeführt (z. B. im `composer`-Image), dort die Prüfung abschalten:
+
+```sh
+composer install --ignore-platform-req=ext-pdf_preflight
+```
+
+oder in der `composer.json` der Anwendung die Plattform festlegen:
 
 ```json
-"require": {
-    "boonkerz/php-pdf-preflight": "^0.1",
-    "ext-pdf_preflight": "^0.1"
+"config": {
+    "platform": {
+        "ext-pdf_preflight": "0.1.0"
+    }
 }
 ```
 
-Die Extension meldet ihre Version an PHP (`phpversion('pdf_preflight')`).
-`composer install` schlägt deshalb fehl, wenn sie fehlt oder eine falsche
-Version installiert ist. Im Build-Stage ohne Extension: `composer install
---ignore-platform-req=ext-pdf_preflight`.
+Die Laufzeitprüfung der Library (`IncompatibleExtensionException`) greift
+in beiden Fällen weiterhin.
 
 Prüfen im Container:
 

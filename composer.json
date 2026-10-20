@@ -11,14 +11,12 @@
     },
     "require": {
         "php": ">=8.2",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ext-pdf_preflight": "0.1.*"
     },
     "require-dev": {
         "phpstan/phpstan": "^2.1",
         "phpunit/phpunit": "^11.5"
-    },
-    "suggest": {
-        "ext-pdf_preflight": "Native PDF analysis, required to analyse PDF files (rules and profiles work without it). Prebuilt binaries: see docs/release.md"
     },
     "autoload": {
         "psr-4": {
@@ -37,7 +35,8 @@
     "config": {
         "sort-packages": true,
         "platform": {
-            "php": "8.2.0"
+            "php": "8.2.0",
+            "ext-pdf_preflight": "0.1.0"
         }
     }
 }
