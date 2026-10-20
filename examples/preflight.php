@@ -5,7 +5,7 @@ declare(strict_types=1);
 /**
  * Checks a file against a JSON profile and prints the result as JSON.
  *
- *   cd php && composer install
+ *   composer install
  *   php -d extension=pdf_preflight.so examples/preflight.php examples/profiles/business-card.json file.pdf
  */
 
@@ -13,7 +13,7 @@ use PrintPreflight\Exceptions\InvalidProfileException;
 use PrintPreflight\Preflight;
 use PrintPreflight\Profile;
 
-require __DIR__ . '/../php/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 if ($argc < 3) {
     fwrite(STDERR, "usage: php examples/preflight.php PROFILE.json FILE\n");
